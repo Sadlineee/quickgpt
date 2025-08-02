@@ -41,6 +41,12 @@ export const Message = styled.div.withConfig({
   color: ${({ theme }) => theme.colors.secondary};
   background-color: ${(props) => (props.isUser ? '#33FF66' : '#FFFFFF')};
   border-radius: 5px;
+
+  @media
+  ${({ theme }) => theme.media.extraSmall} 
+  {
+    font-size: 1.25rem;  
+  }
 `
 
 export const TextField = styled.textarea`
@@ -56,6 +62,12 @@ export const TextField = styled.textarea`
 
   &::-webkit-scrollbar {
     display: none;
+  }
+
+  @media
+  ${({ theme }) => theme.media.extraSmall} 
+  {
+    font-size: 1.25rem;  
   }
 `
 
@@ -85,5 +97,12 @@ export const Button = styled.button`
 
   &:active {
     border-radius: 50px;
+  }
+
+  @media
+  ${({ theme }) => theme.media.extraSmall} 
+  {
+    font-size: 1.25rem;  
+    font-weight: 400;
   }
 `
